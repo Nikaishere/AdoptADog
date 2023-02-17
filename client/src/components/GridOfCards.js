@@ -1,23 +1,28 @@
 import { motion,AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
-import Overlay from "./Overlay.js";
+import { useNavigate } from "react-router-dom";
+// import Overlay from "./Overlay.js";
 
 
 
 const GridOfCards = ({dog_breeds}) => {
-  const [selectedId, setSelectedId] = useState(null)
-const [open, setOpen] = useState(false);
+  // const [selectedId, setSelectedId] = useState(null)
+  // const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
 
+  // const openModal = () => {
+  //   setOpen(true);
+  // };
+  // const closeModal = () => {
+  //   setOpen(false);
+  // };
 
-  const openModal = () => {
-    setOpen(true);
-  };
-  const closeModal = () => {
-    setOpen(false);
-  };
-
-
+  const handleViewDetails = (id) => {
+    
+    console.log("animalId:", id)
+    navigate(`/breeds/${id}`);
+  }
 
   return (
     <div className="container">
@@ -25,11 +30,12 @@ const [open, setOpen] = useState(false);
           {dog_breeds.map((dog_breed, index) => (
             <motion.div
               layoutId={index}
-              onClick={open}
+              // onClick={open}
+              onClick={() => handleViewDetails(dog_breed.id)}
               className="card"
               key={dog_breed.id}
               whileHover={{ opacity: 1 }}
-              open={openModal}
+              // open={openModal}
             >
               <img
                 className="card_image"
@@ -38,7 +44,7 @@ const [open, setOpen] = useState(false);
               />
               <div className="card_footer">
                 <h2 className="card_title">{dog_breed.name}</h2>
-                {open && <Overlay close={closeModal}></Overlay>}
+                {/* {open && <Overlay close={closeModal}></Overlay>} */}
               </div>
             </motion.div>
             

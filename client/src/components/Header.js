@@ -12,7 +12,7 @@ const Header = () => {
             <a>Test</a>
           </li>
           <li>
-            <a>Breeds</a>
+            <a href="/breeds">Breeds</a>
           </li>
           <li>
             <a>Images</a>

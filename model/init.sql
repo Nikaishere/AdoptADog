@@ -1,3 +1,13 @@
+DROP TABLE IF EXISTS `users`; 
+
+CREATE TABLE `users`(
+	`id` INT NOT NULL AUTO_INCREMENT, 
+	`username` VARCHAR(255) NOT NULL, 
+	`password` VARCHAR(255) NOT NULL, 
+	PRIMARY KEY (id)
+);
+
+
 DROP TABLE IF EXISTS dog_breeds;
 
 CREATE TABLE dog_breeds (
@@ -20,7 +30,7 @@ insert into dog_breeds (name,image, size, energy,protectiveness,trainability,she
 insert into dog_breeds (name,image, size, energy,protectiveness,trainability,shedding) values ("Basset hound","https://www.akc.org/wp-content/uploads/2017/11/Basset-Hound-On-White-03.jpg","medium","low",
 "social","low","moderate");
 
- insert into dog_breeds (name,image, size, energy,protectiveness,trainability,shedding) values ("Basenji","https://www.akc.org/dog-breeds/basenji/","medium","high",
+ insert into dog_breeds (name,image, size, energy,protectiveness,trainability,shedding) values ("Basenji","https://www.akc.org/wp-content/uploads/2017/11/Basenji-On-White-01.jpg","medium","high",
 "social","moderate","moderate");
 
  insert into dog_breeds (name,image, size, energy,protectiveness,trainability,shedding) values ("Chesapeake bay retriever","https://www.akc.org/wp-content/uploads/2017/11/Chesapeake-Bay-Retriever-On-White-03.jpg","large","high",

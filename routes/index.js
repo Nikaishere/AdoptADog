@@ -3,7 +3,7 @@ var router = express.Router();
 const db = require("../model/helper");
 
 //get all dog_breeds
-router.get("/", async function (req, res) {
+router.get("/breeds", async function (req, res) {
   try {
     const response = await db("select * from dog_breeds;");
     res.send({ dog_breeds: response.data });
@@ -12,7 +12,7 @@ router.get("/", async function (req, res) {
   }
 });
 // GET one dog_breed
-router.get("/:id", async (req, res) => {
+router.get("/breeds/:id", async (req, res) => {
   const id = Number(req.params.id);
 
   try {
@@ -28,6 +28,7 @@ router.get("/:id", async (req, res) => {
     res.status(500).send(error);
   }
 });
+
 
 module.exports = router;
 

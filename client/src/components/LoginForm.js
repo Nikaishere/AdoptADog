@@ -8,6 +8,7 @@ import React, { useEffect, useState } from "react";
     
       const handleSubmit = (event) => {
         event.preventDefault()
+        console.log('sumbitted!')
       }
 
    return(

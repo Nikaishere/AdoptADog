@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import HomePage from "./components/HomePage";
 import DogBreedsPage from "./components/DogBreedsPage";
 import LoginForm from "./components/LoginForm";
+import SelectedBreedDetails from "./components/SelectedBreedDetails";
 import "./index.css";
 import "./App.css";
 
@@ -14,11 +15,12 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <LoginForm/>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/breeds" element={<DogBreedsPage />} />
+          <Route path="/breeds/:id" element={<SelectedBreedDetails />} />
+          <Route path="/login" element={<LoginForm />} />
         </Routes>
       </BrowserRouter>
 
