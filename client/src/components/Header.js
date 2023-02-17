@@ -2,9 +2,10 @@ import logo from "./adopt a dog logo.jpg";
 
 const Header = () => {
   return (
+    
     <div class="navbar bg-base-100">
       <div class="flex-1">
-        <img class="h-24" src={logo}></img>
+       <a href="/"> <img class="h-24" src={logo}></img></a>
       </div>
       <div class="flex-none">
         <ul class="menu menu-horizontal px-1">
