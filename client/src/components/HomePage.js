@@ -1,4 +1,5 @@
-
+import WhyAdopt from "./WhyAdopt";
+import Dog from "./Dog";
 
 
 const HomePage = () => {
@@ -6,6 +7,9 @@ const HomePage = () => {
     <div>
 THIS IS A HOMEPAGE
     </div>
+
+
+     
 
   );
 };
