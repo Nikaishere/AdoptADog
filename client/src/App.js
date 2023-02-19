@@ -10,6 +10,7 @@ import Dog from "./components/Dog";
 import WhyAdopt from "./components/WhyAdopt";
 import "./index.css";
 import "./App.css";
+import FindYourMatch from "./components/FindYourMatch";
 
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
           <Route path="/login" element={<LoginForm />} />
         </Routes>
       </BrowserRouter>
+    
+      <Dog/>
       <Footer />
     </div>
   );

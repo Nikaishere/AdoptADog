@@ -21,11 +21,23 @@ const SelectedBreedDetails = () => {
     
     return (
         <div className="dog_card">
-          <h1>Breed details </h1>
+          <h1 class="text-4xl font-extrabold py-3">Breed details </h1>
           {selectedDog && 
-            <div>
-                <div>Name: {selectedDog.name}</div>
-                <div>Size: {selectedDog.size}</div>
+            <div className="details_container">
+                <div >
+                    <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                        <li class="font-extrabold py-1">{selectedDog.name}</li>
+                        <li class="font-extrabold py-1">{selectedDog.size} size</li>
+                        <li class="font-extrabold py-1">{selectedDog.energy} energy</li>
+                        <li class="font-extrabold py-1">{selectedDog.protectiveness}</li>
+                        <li class="font-extrabold py-1">{selectedDog.trainability} trainability</li>
+                        <li class="font-extrabold py-1">{selectedDog.shedding} shedding</li>
+                    </ul>
+
+                    <div class=""><img src= {selectedDog.image}></img></div>
+                </div>
+                
+               
             </div>
         } 
 
