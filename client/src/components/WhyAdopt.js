@@ -2,17 +2,18 @@
 const WhyAdopt = () => {
 
     return (
-        <div class="container text-center p-16">
-            <h1 class="font-bold text-5xl p-4">Why adoption?</h1>
-            <p>You are fighting against cruel breeding</p>
-            <p>You are giving a second chance to a deserving dog</p>
-            <p>Pets are good for your health</p>
-            <p>You are helping to build a humane society</p>
+        <div classname="container" class="container text-center p-16 bg-teal-300">
+            <h1 class="font-bold text-5xl p-4 text-neutral-900">Why adoption?</h1>
+            <p class="text-neutral-900">You are fighting against cruel breeding</p>
+            <p class="text-neutral-900">You are giving a second chance to a deserving dog</p>
+            <p class="text-neutral-900">Pets are good for your health</p>
+            <p class="text-neutral-900">You are helping to build a humane society</p>
 
            <div class="p-6">
-            <button class="bg-transparent hover:bg-gray-500 text-gray-500 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded">Find your match</button>
+            <a href="/breeds"><button class="bg-transparent hover:bg-neutral-900 text-neutral-900 font-semibold hover:text-yellow-400 py-2 px-4 border border-neutral-900 hover:border-transparent rounded">Find your match</button></a>
             </div> 
         </div>
+
 
     )
 }

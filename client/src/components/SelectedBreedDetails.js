@@ -17,6 +17,12 @@ const SelectedBreedDetails = () => {
     useEffect(() => {
         getDogById(id);
     }, []);
+
+    const [openModal, setOpenModal] = useState(false);
+
+        const close = () => {
+    setOpenModal(false);
+    };
     
     
     return (
@@ -35,12 +41,9 @@ const SelectedBreedDetails = () => {
                     </ul>
 
                     <div class=""><img src= {selectedDog.image}></img></div>
-                </div>
-                
-               
+                </div>                          
             </div>
         } 
-
         </div>
     )
 }

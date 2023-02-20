@@ -1,13 +1,14 @@
 import WhyAdopt from "./WhyAdopt";
 import Dog from "./Dog";
-import FindYourMatch from "./FindYourMatch";
+
 
 
 const HomePage = () => {
   return (
-  <WhyAdopt/>
-    
-
+  <div>
+    <WhyAdopt/>
+    <Dog/>  
+  </div>
   );
 };
 
