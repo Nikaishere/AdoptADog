@@ -27,11 +27,11 @@ const SelectedBreedDetails = () => {
     
     return (
         <div className="dog_card">
-          <h1 class="text-4xl font-extrabold py-3">Breed details </h1>
+          <h1 class="text-4xl font-extrabold py-3" align="center">Breed details </h1><br></br>
           {selectedDog && 
             <div className="details_container">
                 <div >
-                    <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                    <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400" >
                         <li class="font-extrabold py-1">{selectedDog.name}</li>
                         <li class="font-extrabold py-1">{selectedDog.size} size</li>
                         <li class="font-extrabold py-1">{selectedDog.energy} energy</li>
@@ -40,7 +40,7 @@ const SelectedBreedDetails = () => {
                         <li class="font-extrabold py-1">{selectedDog.shedding} shedding</li>
                     </ul>
 
-                    <div class=""><img src= {selectedDog.image}></img></div>
+                    <div class="" align="center"><img src= {selectedDog.image} alt="dog image"></img></div>
                 </div>                          
             </div>
         } 

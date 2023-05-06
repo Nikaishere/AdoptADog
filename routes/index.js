@@ -3,7 +3,7 @@ var router = express.Router();
 const db = require("../model/helper");
 
 //get all dog_breeds
-router.get("/breeds", async function (req, res) {
+router.get("/", async function (req, res) {
   try {
     const response = await db("select * from dog_breeds;");
     res.send({ dog_breeds: response.data });

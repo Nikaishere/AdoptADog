@@ -28,6 +28,7 @@
     border-radius: 14px 14px 14px 14px;
     box-shadow: 10px 10px 24px -7px rgba(199, 197, 199, 1);
     opacity:0.8;
+    cursor: pointer;
 }
 
 .card_footer {
@@ -45,4 +46,13 @@
     max-width: 1200px;
     margin: 0 auto; 
 
+}
+
+div.details_container {
+    text-align: center;
+}
+
+ul {
+    display: inline-block;
+  text-align: left;
 }
