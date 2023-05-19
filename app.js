@@ -8,17 +8,6 @@ var cors = require('cors')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-app.get("/*", function (req,res) {
-  res.sendFile(
-    path.join(__dirname, "../client/public/index.html"),
-    function (err) {
-      if(err) {
-        res.status(500).send(err);
-      }
-    }
-  );
-});
-
 
 
 
@@ -32,9 +21,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(express.static(path.join(__dirname, "/client/build")));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+//poner express. de heroku
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/client/build/index.html"));
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -52,10 +45,5 @@ app.use(function(err, req, res, next) {
   res.send('error');
 });
 
-
-
-const PORT = process.env.PORT || 5001;
-
-server.listen(PORT, () => console.log("Listening to port" + PORT));
 
 module.exports = app;
