@@ -1,6 +1,7 @@
 {
   "name": "adopt-a-dog-web-app",
   "version": "0.0.0",
+  "main":"./routes/index.js",
   "private": true,
   "scripts": {
     "start":"nodemon ./bin/www",

@@ -8,9 +8,6 @@ var cors = require('cors')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-
-
-
 var app = express();
 
 // view engine setup
@@ -20,7 +17,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'client/public')));
+app.use(express.static(path.join(__dirname, '../build')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -42,9 +39,13 @@ app.use(function(err, req, res, next) {
 });
 
 //poner express. de heroku
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + 'client/public/index.html'));
+app.get("/*",  (req, res) => {
+  res.sendFile(path.join(__dirname, '../build', 'index.html'));
 });
+
+//connection to port
+const { PORT } = process.env;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 
 
