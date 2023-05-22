@@ -17,7 +17,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname + 'client/build')));
+app.use(express.static(path.join(__dirname,'/client/build')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -39,13 +39,13 @@ app.use(function(err, req, res, next) {
 });
 
 //poner express. de heroku
-app.get("/*",  (req, res) => {
+app.get("*",  (req, res) => {
   res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
 //connection to port
-const { PORT } = process.env;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+//const { PORT } = process.env;
+//app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 
 
