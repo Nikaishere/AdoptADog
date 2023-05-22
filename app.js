@@ -43,9 +43,6 @@ app.get("*",  (req, res) => {
   res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
-//connection to port
-//const { PORT } = process.env;
-//app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 
 

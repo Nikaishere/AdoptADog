@@ -29,6 +29,13 @@ router.get("/breeds/:id", async (req, res) => {
   }
 });
 
+//connection to port
+
+app.listen(process.env.PORT || PORT, () =>{
+  console.log(`Server running on port ${PORT}`);
+});
+
+
 
 module.exports = router;
 
