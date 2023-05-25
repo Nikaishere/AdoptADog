@@ -1,7 +1,7 @@
 {
   "name": "adopt-a-dog-web-app",
   "version": "0.0.0",
-  "main": "index.js",
+  "main": "bin/www",
   "private": true,
   "scripts": {
     "start": "node bin/www",
