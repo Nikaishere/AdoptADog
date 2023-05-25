@@ -8,7 +8,7 @@ const SelectedBreedDetails = () => {
     const [selectedDog, setSelectedDog] = useState(); 
     
     const getDogById = async (dogId) => {
-        const req = await fetch(`${HOSTNAME}/breeds/${dogId}`);
+        const req = await fetch(`${HOSTNAME}/api/breeds/${dogId}`);
         const res = await req.json();
         console.log(res);
         setSelectedDog(res.dog_breed);  

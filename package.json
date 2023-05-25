@@ -4,7 +4,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "node index.js",
+    "start": "node bin/www",
     "migrate": "node ./model/database",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
