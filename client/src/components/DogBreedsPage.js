@@ -15,9 +15,7 @@ function DogBreedsPage() {
 
   useEffect(() => {
     const getDogBreeds = async () => {
-      const response = await fetch("https://adoptadog.herokuapp.com/api");
-
-      //const response = await fetch(`${url}/api`);
+      const response = await fetch(`${url}/api`);
       const data = await response.json();
       const dog_breeds = data.dog_breeds;
 
