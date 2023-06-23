@@ -1,17 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
-
+//this should 
 const HOSTNAME = 'http://localhost:5000';
 
 const SelectedBreedDetails = () => {
     const {id} = useParams();
     const [selectedDog, setSelectedDog] = useState(); 
+    const [error, setError] = useState(false)
     
     const getDogById = async (dogId) => {
-        const req = await fetch(`${HOSTNAME}/api/breeds/${dogId}`);
-        const res = await req.json();
-        console.log(res);
-        setSelectedDog(res.dog_breed);  
+        //as in dogbreedspage, i will also wrap this in try/catch and set the dog only if the response is successful 
+        //you can even decide to create a screen in another component that shows only when there is an error across the webpage
+        try{ const response = await fetch(`${HOSTNAME}/api/breeds/${dogId}`);
+        const dogById = await response.json();
+        setSelectedDog(res.dog_breed); }
+        catch(err){
+        console.log(error)
+        //or extract message from error and paint into the component, in this second case initial state can be an empty screen
+        setError(true)
+        }
+        
     }
 
     useEffect(() => {
