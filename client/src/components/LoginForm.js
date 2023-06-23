@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+//Are there any routes that should be private, hence user needs a login?
+//if you need we can review together the implementation of a custom hook for auth and make this part functional
 
 
   const LoginForm = () => {
