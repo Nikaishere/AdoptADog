@@ -23,6 +23,7 @@ router.get("/breeds/:id", async (req, res) => {
       res.status(404).send();
       return;
     }
+    //is there a reason you are destructuring?
     res.send({ dog_breed });
   } catch (error) {
     res.status(500).send(error);
